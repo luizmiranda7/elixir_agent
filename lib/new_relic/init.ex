@@ -76,6 +76,16 @@ defmodule NewRelic.Init do
           "NEW_RELIC_ECTO_INSTRUMENTATION_ENABLED",
           :ecto_instrumentation_enabled
         ),
+      oban_instrumentation:
+        determine_feature(
+          "NEW_RELIC_OBAN_INSTRUMENTATION_ENABLED",
+          :oban_instrumentation_enabled
+        ),
+      broadway_instrumentation:
+        determine_feature(
+          "NEW_RELIC_BROADWAY_INSTRUMENTATION_ENABLED",
+          :broadway_instrumentation_enabled
+        ),
       redix_instrumentation:
         determine_feature(
           "NEW_RELIC_REDIX_INSTRUMENTATION_ENABLED",
